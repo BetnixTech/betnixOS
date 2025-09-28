@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="/images/favicon.png">
+<title>BetOS & Clash</title>
+<style>
+  /* ===== Reset & basics ===== */
+  * { margin:0; padding:0; box-sizing:border-box; font-family:'Ubuntu', sans-serif; }
+  body { background:#fdfdfd; color:#333; line-height:1.6; }
+
+  /* ===== Header ===== */
+  header { background:#e95420; color:white; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; position:sticky; top:0; z-index:10; }
+  .logo { font-size:1.5rem; font-weight:bold; }
+  nav ul { display:flex; list-style:none; gap:1rem; }
+  nav a { color:white; text-decoration:none; font-weight:bold; }
+  nav a:hover { text-decoration:underline; }
+
+  /* ===== Hero ===== */
+  #hero { background:#f0f0f0; text-align:center; padding:6rem 2rem 4rem; }
+  #hero h1 { font-size:3rem; color:#e95420; margin-bottom:1rem; }
+  #hero p { font-size:1.2rem; margin-bottom:2rem; }
+  .btn { background:#e95420; color:white; padding:0.8rem 2rem; text-decoration:none; font-weight:bold; border-radius:5px; transition:0.3s; }
+  .btn:hover { background:#bf3e18; }
+
+  /* ===== Sections ===== */
+  section { padding:4rem 2rem; max-width:1200px; margin:0 auto; }
+  h2 { font-size:2rem; margin-bottom:2rem; color:#e95420; text-align:center; }
+
+  /* ===== Features ===== */
+  .feature-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem; }
+  .feature-card { background:white; border:1px solid #ddd; padding:2rem; border-radius:10px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+  .feature-card h3 { margin-bottom:1rem; color:#e95420; }
+
+  /* ===== Download & Docs ===== */
+  ul.download-list { list-style:none; padding-left:0; display:flex; flex-direction:column; gap:1rem; }
+  ul.download-list li a { color:#e95420; text-decoration:none; font-weight:bold; }
+  ul.download-list li a:hover { text-decoration:underline; }
+
+  /* ===== Footer ===== */
+  footer { background:#333; color:white; text-align:center; padding:2rem 1rem; }
+  footer a { color:#e95420; text-decoration:none; }
+  footer a:hover { text-decoration:underline; }
+
+  /* ===== Responsive ===== */
+  @media(max-width:768px){ nav ul { flex-direction:column; gap:0.5rem; text-align:center; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🔥 BetOS & Clash 🔥</div>
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#downloads">Download</a></li>
+      <li><a href="#docs">Docs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="hero">
+  <h1>Welcome to BetOS & Clash</h1>
+  <p>The ultimate custom Linux distro and programming language experience.</p>
+  <a class="btn" href="#downloads">Get Started</a>
+</section>
+
+<section id="about">
+  <h2>About BetOS & Clash</h2>
+  <p style="text-align:center; max-width:800px; margin:0 auto;">BetOS is a custom Linux distribution tailored for experimenting and running the Clash programming language. Clash combines Bash-style commands with low-level Assembly-style operations, giving you full control over your OS and desktop apps.</p>
+</section>
+
+<section id="features">
+  <h2>Features</h2>
+  <div class="feature-container">
+    <div class="feature-card">
+      <h3>Custom Kernel</h3>
+      <p>BetOS is built with a fully customized Linux kernel for performance and flexibility.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Clash Language</h3>
+      <p>Run powerful scripts to control your OS and interact with your desktop environment.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Desktop Apps</h3>
+      <p>Enjoy a full GUI with pre-installed apps, including a BetLang terminal for Clash.</p>
+    </div>
+  </div>
+</section>
+
+<section id="downloads">
+  <h2>Download BetOS & Clash</h2>
+  <ul class="download-list">
+    <li><a href="https://github.com/BetnixTech/BetOS">BetOS Kernel Source</a></li>
+    <li><a href="https://github.com/BetnixTech/BetOS/blob/main/Documentation/BetOS.txt">Clash Interpreter</a></li>
+    <li>Live ISO (coming soon!)</li>
+  </ul>
+</section>
+
+<section id="docs">
+  <h2>Clash Documentation</h2>
+  <p style="text-align:center; max-width:800px; margin:0 auto;">Learn how to use Clash, from basic commands to controlling your BetOS desktop environment. Sample commands: <code>print("Hello BetOS")</code>, <code>run_app("Terminal")</code>, and more.</p>
+</section>
+
+<section id="contact">
+  <h2>Contact & GitHub</h2>
+  <p style="text-align:center;">Check out the projects on GitHub or reach out for questions:</p>
+  <p style="text-align:center;"><a href="https://github.com/PythonCoders45/linux">Linux Source Code</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 BetOS & Clash | <a href="https://github.com/BetnixTech/BetOS/blob/main/Documentation/BetOS.txt">GitHub Repo</a></p>
+</footer>
+
+<script>
+  // Smooth scrolling for nav links
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
